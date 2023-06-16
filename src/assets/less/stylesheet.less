@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neonderthaw&family=Ribeye+Marrow&display=swap');
+body{
+    width:100%;    
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    &.nightMode{
+        background-color: #000000;
+        color:#ffffff;
+        .header-menu{
+            .header-menu-block{
+                &.menu-list{
+                    ul{                       
+                        li{                            
+                            a{
+                                 
+                            }
+                        }
+                    }
+                }
+                &.menu-contacts{
+                    
+                    .contacts-block{                        
+                        span{
+                            a{
+                                color:#ffffff;
+                            }
+                        }
+                       
+                    }
+                }
+                &.menu-sign-up{
+                    .sign-up-btn{
+                        background: #ffffff;
+                        Color:#000000;
+                    }
+                }
+            }
+        }
+    }
+    &.dayMode{
+       
+        background-color: #ffffff;
+        color:#000000;
+        
+        .header-menu{
+            .header-menu-block{
+                &.menu-sign-up{
+                    .sign-up-btn{
+                        background: #000000;
+                        Color:#ffffff;
+                    }
+                }
+            }
+        }
+
+    }
+  }
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+  
+    font-weight: normal;
+
+    .header-menu{
+        display:flex;
+        width:100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height:60px;
+        .header-menu-block{
+            &.menu-list{
+                ul{
+                    
+                    list-style-type: none;
+                    li{
+                        display:inline-block;
+                        line-height: 60px;
+                        font-weight: bold;
+                        font-size: 15px;
+                        margin-left:15px;
+                        a{
+                            text-decoration: none;
+                            &:hover{
+                                text-decoration: underline;
+                            }    
+                        }
+                    }
+                }
+            }
+            &.menu-contacts{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                line-height: 60px;
+                
+                .contacts-block{
+                    display:flex;
+                    span{
+                        font-weight: bold;
+                        font-size: 15px;
+                        display: flex;
+                        align-items: center;
+                        a{
+                            display:block;
+                            line-height: 60px;
+                        }
+                    }
+                    span ~ span {
+                        margin-left:10px;
+                    }
+                }
+                .contacts-block ~ .contacts-block{
+                    margin-left:15px;
+                }
+            }
+            &.menu-sign-up{
+                display:flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: end;
+                .sign-up-btn{
+                    display:block;
+                    min-width:130px;
+                    border-radius: 5px;
+                    text-align: center;
+                    font-size:15px;
+                    line-height:40px;
+                    border:none;
+                    width:130px;
+                    height:40px;
+                    line-height: 40px;
+                }
+                div ~ div{
+                    margin-left:10px;
+                }
+
+            }
+        }
+    }
+  }
+  
+  

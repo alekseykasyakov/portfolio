@@ -1,0 +1,125 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Ew-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Neonderthaw';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/neonderthaw/v3/Iure6Yx5-oWVZI0r-17AeZZJ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Ribeye Marrow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ribeyemarrow/v22/GFDsWApshnqMRO2JdtRZ2d0vEAw.ttf) format('truetype');
+}
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+body.nightMode {
+  background-color: #000000;
+  color: #ffffff;
+}
+body.nightMode .header-menu .header-menu-block.menu-contacts .contacts-block span a {
+  color: #ffffff;
+}
+body.nightMode .header-menu .header-menu-block.menu-sign-up .sign-up-btn {
+  background: #ffffff;
+  Color: #000000;
+}
+body.dayMode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dayMode .header-menu .header-menu-block.menu-sign-up .sign-up-btn {
+  background: #000000;
+  Color: #ffffff;
+}
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+#app .header-menu {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+#app .header-menu .header-menu-block.menu-list ul {
+  list-style-type: none;
+}
+#app .header-menu .header-menu-block.menu-list ul li {
+  display: inline-block;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 15px;
+}
+#app .header-menu .header-menu-block.menu-list ul li a {
+  text-decoration: none;
+}
+#app .header-menu .header-menu-block.menu-list ul li a:hover {
+  text-decoration: underline;
+}
+#app .header-menu .header-menu-block.menu-contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 60px;
+}
+#app .header-menu .header-menu-block.menu-contacts .contacts-block {
+  display: flex;
+}
+#app .header-menu .header-menu-block.menu-contacts .contacts-block span {
+  font-weight: bold;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+#app .header-menu .header-menu-block.menu-contacts .contacts-block span a {
+  display: block;
+  line-height: 60px;
+}
+#app .header-menu .header-menu-block.menu-contacts .contacts-block span ~ span {
+  margin-left: 10px;
+}
+#app .header-menu .header-menu-block.menu-contacts .contacts-block ~ .contacts-block {
+  margin-left: 15px;
+}
+#app .header-menu .header-menu-block.menu-sign-up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+#app .header-menu .header-menu-block.menu-sign-up .sign-up-btn {
+  display: block;
+  min-width: 130px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  border: none;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+}
+#app .header-menu .header-menu-block.menu-sign-up div ~ div {
+  margin-left: 10px;
+}

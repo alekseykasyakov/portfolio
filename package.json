@@ -8,10 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "compiless": "^1.0.1",
     "vue": "^3.3.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
+    "compile-less-cli": "^1.8.14",
     "vite": "^4.3.5"
   }
 }

@@ -12,3 +12,12 @@ export default defineConfig({
     }
   }
 })
+/*const compileLess = require('compile-less-cli');
+
+/*compileLess('src', {
+  out: './assets/less/stylesheet.less',              // Output directory.
+  combine: './assets/css/stylesheet.css', // Combine CSS files.
+})*/
+require("compiless")(__dirname, {
+  "./src/assets/less/": "./src/assets/css/"
+});
