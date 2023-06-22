@@ -1,6 +1,4 @@
 <script setup>
-//import HelloWorld from './components/HelloWorld.vue'
-//import TheWelcome from './components/TheWelcome.vue'
 
 </script>
 
@@ -8,7 +6,8 @@
   <header>
     <div class="header-menu">
       <div class="header-menu-block menu-mode-btn">
-        <button @click="ChangeMode"> <span class="blur-box">{{ textMode }}</span> 
+        <button @click="ChangeMode"> 
+          <span class="blur-box">{{ textMode }}</span> 
           <span class="blur-box">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_162_312)">
@@ -71,14 +70,77 @@
   </header>
 
   <main>
-    <TheWelcome />
+    <div class="frame_1">
+      <div class="row">
+        <div class="container">
+          <div class="left-side">
+            <div class="large-text-block">
+              <span class="hello-text">Hello!</span><br>
+              <span class="hello-text">I’m Oleksii,</span><br>
+              <span class="hello-text">web developer</span>
+            </div>
+            <div class="board-text">
+              <ul>
+                <li>Frontend developer</li>
+                <li>Backend developer</li>
+                <li>eCommerce developer</li>
+                <li>Search optimization</li>
+                <li>Web designer</li>
+              </ul>
+
+            </div>
+            <div class="contact-me-block">
+              <button class="contact-me-button">Contact me</button>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="slider-with-light">
+              <div class="triangle-light">
+                <!-- <div class="left-light"></div> -->
+                <div id="triangle"></div>
+                <!-- <div class="right-light"></div> -->
+              </div>
+              <div class="slider-tech">
+                <div>
+                  <VueSlickCarousel v-bind="settings">
+                    <div><h3>1</h3></div>
+                    <div><h3>2</h3></div>
+                    <div><h3>3</h3></div>
+                    <div><h3>4</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>5</h3></div>
+                    <div><h3>5</h3></div>
+                    
+                  </VueSlickCarousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
+import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+// optional style for arrows & dots
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 export default {
   data() {
     return {
-      textMode : 'nightMode'
+      textMode : 'nightMode',
+      settings: {
+        "centerMode": true,
+        "centerPadding": "20px",
+        "focusOnSelect": true,
+        "infinite": true,
+        "slidesToShow": 3,
+        "speed": 500
+      }
     }
   },
   methods:{

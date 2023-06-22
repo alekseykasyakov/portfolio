@@ -4,6 +4,17 @@
   }
   
   @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Neonderthaw&family=Ribeye+Marrow&display=swap');
+
+.container{
+    .flex-row-space-beatween{
+        display:flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding:0;
+        margin:0;
+    }
+    
+}  
 body{
     width:100%;    
     min-height: 100vh;
@@ -11,8 +22,64 @@ body{
     &.nightMode{
         background-color: #000000;
         color:#ffffff;
+        @keyframes inside_blue_neon {
+            0%   {box-shadow: inset 0px 0px 10px 2px rgba(0,240,255,0.5);}
+            50%  {box-shadow: inset 0px 0px 50px 22px rgba(0,240,255,0.5);}
+            100% {box-shadow: inset 0px 0px 10px 2px rgba(0,240,255,0.5);}
+        }
+        @keyframes outside_blue_neon {
+            0%   {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            19%   {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            20%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            21%   {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            22%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            23%   {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            49%   {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            50%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            51%  {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            79%  {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            80%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            81%  {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            82%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            83%  {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            84%   {box-shadow:  0px 0px 10px 2px rgba(0,240,255,0.5);}
+            85%  {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+            100% {box-shadow:  0px 0px 50px 22px rgba(0,240,255,0.5);}
+        }  
         .header-menu{
             .header-menu-block{
+                &.menu-mode-btn{
+                    button{
+                        
+                        .blur-box{
+                            position:relative;                        
+                            text-shadow: 5px 5px 6px rgba(0, 240, 255, 1);
+                            
+                            &:before{
+                                content: '';
+                                position:absolute; 
+                                box-shadow: inset 0px 0px 50px 22px rgba(0,240,255,0.5);
+                                animation-name: inside_blue_neon;
+                                animation-duration: 4s;
+                                animation-iteration-count: infinite;
+                            }   
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                height: 0px;
+                                box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5);
+                                animation-name: outside_blue_neon;
+                                animation-duration: 10s;
+                                animation-iteration-count: infinite;
+                               
+                            }                        
+                        }
+                        
+                    }
+                }
                 &.menu-list{
                     ul{                       
                         li{                            
@@ -41,6 +108,17 @@ body{
                 }
             }
         }
+        .frame_1{
+            .right-side{
+                .slider-with-light{
+                    .triangle-light{
+                        #triangle{
+                            
+                        }
+                    }
+                }
+            }
+        }
     }
     &.dayMode{
        
@@ -60,10 +138,10 @@ body{
 
     }
   }
-  #app {
+  #app{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    //padding: 2rem;
   
     font-weight: normal;
 
@@ -75,6 +153,7 @@ body{
         align-items: center;
         height:60px;
         .header-menu-block{
+            
             &.menu-list{
                 ul{
                     
@@ -142,6 +221,121 @@ body{
                     margin-left:10px;
                 }
 
+            }
+        }
+    }
+    .frame_1{
+        .left-side{
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width:35%;
+            height:100%;
+            float:left;
+            .large-text-block{
+                margin-top:70px;
+            }
+            .board-text{
+                margin-top:60px;
+                border-radius:15px;
+                border: 6px solid #00F0FF;
+                padding: 10px 10px 10px 30px;
+                line-height: 1.5;
+                font-size: 24px;
+                -webkit-box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5); 
+                box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5);
+            }
+            .contact-me-block{
+                margin-top:60px;
+                .contact-me-button{
+                   font-size:24px;   
+                   background: transparent;
+                   border-radius:15px;
+                   color:#00F0FF;
+                   padding:18px 20px;
+                   width:300px;
+                   border:6px solid   #00F0FF;
+                   -webkit-box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5); 
+                box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5);
+                }
+            }
+            .hello-text{
+                font-size:64px;
+                font-family: 'Neonderthaw', cursive;
+                color: #00F0FF;    
+                text-shadow: 5px 5px 6px rgba(0, 240, 255, 1);
+                position: relative;
+                line-height: 1;
+                &:before{
+                    content: '';
+                    position:absolute;
+                    -webkit-box-shadow: inset 0px 0px 50px 22px rgba(0,240,255,0.5); 
+                    box-shadow: inset 0px 0px 50px 22px rgba(0,240,255,0.5);
+                }   
+                &:after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 0px;
+                    -webkit-box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5); 
+                    box-shadow: 0px 0px 50px 22px rgba(0,240,255,0.5);
+                } 
+
+            }    
+        }
+        .right-side{
+            width:65%;
+            
+            float:left;
+            .slider-with-light{
+                
+                width:100%;
+                height:100%;
+                position:relative;
+                .triangle-light{
+                    display: block;
+                    min-height: 750px;
+                    min-width: 100%;
+                    position:relative;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    #triangle{
+                        width: 0;
+                        height: 0;
+                        margin-top:-150px;
+                        border-style: solid;
+                        border-width: 0 200px 550px 200px;
+                        border-color: transparent transparent #A6A6A6 transparent;
+                        transition: .3s;  
+                        line-height: 0px;
+                        opacity: 50%;
+                        filter: blur(100px);
+                    }
+                    .left-light{
+                        position:absolute;
+                        width:475px; 
+                        height:0px;   
+                        top: 35%;
+                        left:0;
+                        margin-right:25px;
+                        transform: rotate(300deg);
+                        -webkit-box-shadow: 0px 0px 50px 22px rgba(166,166,166,0.5); 
+                    }
+                    .right-light{
+                        position:absolute;
+                       width:475px; 
+                       height:0px; 
+                       top: 35%;
+                       left:40%;
+                       margin-left:25px;   
+                       transform: rotate(60deg); 
+                       -webkit-box-shadow: 0px 0px 50px 22px rgba(166,166,166,0.5); 
+                    }
+                }
             }
         }
     }
